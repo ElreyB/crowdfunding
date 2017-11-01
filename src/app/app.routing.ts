@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectComponent } from './project/project.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -15,6 +16,10 @@ const appRoutes: Routes = [
   {
     path: 'projects',
     component: ProjectComponent
+  },
+  {
+    path: 'projects/:id',
+    component: ProjectDetailComponent
   },
   // {
   //   path: 'about',

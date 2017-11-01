@@ -1,0 +1,8 @@
+<div class="details">
+  <h3>{{(projectToDisplay | async).name}}</h3>
+  <h4>Project Managers:</h4>
+  <h5 *ngFor="let manager of (projectToDisplay | async).projectManagers">{{manager}}</h5>
+  <h4>Description: {{(projectToDisplay | async).description}}</h4>
+  <h4>Funding Goal: ${{(projectToDisplay | async).goal}}</h4>
+  <h4>Intention: {{(projectToDisplay | async).intention}}</h4>
+</div>
