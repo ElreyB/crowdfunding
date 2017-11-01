@@ -1,0 +1,22 @@
+{"projects": [{
+  "name": "Save Kittens",
+  "projectManagers": ["Elrey", "Megan"],
+  "description": "We want to save kittens",
+  "goal": 5000000000,
+  "intention": "To save the Kittens"
+  },
+  {
+  "name": "Save Puppies",
+  "projectManagers": ["Bob", "Jerome", "Oscar"],
+  "description": "We want to save puppies",
+  "goal": 90000,
+  "intention": "To save the Puppies"
+  },
+  {
+  "name": "Save Birds",
+  "projectManagers": ["Cindy"],
+  "description": "We want to save birds",
+  "goal": 999468,
+  "intention": "To save the birds"
+    }]
+}
