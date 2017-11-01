@@ -8,6 +8,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ProjectComponent } from './project/project.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
     AppComponent,
     ProjectComponent,
     WelcomeComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    AddProjectComponent
   ],
   imports: [
     BrowserModule,
