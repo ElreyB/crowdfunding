@@ -4,8 +4,6 @@ import { ProjectService } from '../project.service';
 import { Router } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2/database';
 
-
-
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',

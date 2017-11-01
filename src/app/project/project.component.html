@@ -1,3 +1,7 @@
-<p>
-  project works!
-</p>
+<h2>Projects:</h2>
+
+<div *ngFor="let project of projects | async" (click)="goToProjectPage" class="panel panel-default">
+  <div class="panel-body">
+    <h4>{{project.name}}</h4>
+  </div>
+</div>
