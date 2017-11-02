@@ -1,7 +1,10 @@
-<div class="add">
+<button (click)="operationTask('add')" type="button" name="button" class="btn btn-info">Add a Project</button>
+<button (click)="operationTask('edit')" type="button" name="button" class="btn btn-warning">Edit a Project</button>
+
+<div *ngIf="operation === 'add'">
  <app-add-project></app-add-project>
 </div>
 
-<div class="">
+<div *ngIf="operation === 'edit'">
  <app-project></app-project>
 </div>

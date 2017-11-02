@@ -13,9 +13,13 @@ import { EditProjectComponent } from '../edit-project/edit-project.component';
   providers: [ProjectService]
 })
 export class AdminComponent implements OnInit {
-
+  operation = null;
   constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  operationTask(task) {
+    this.operation = task;
   }
 }

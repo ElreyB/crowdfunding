@@ -10,3 +10,7 @@
 .container {
   margin-bottom: 60px;
 }
+
+body {
+  background-image: url('/assets/images/helping-hands.png');
+}
