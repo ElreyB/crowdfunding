@@ -1,6 +1,7 @@
 <div class="details">
   <h3>{{(projectToDisplay | async).name}}</h3>
   <p>Funds: ${{(projectToDisplay | async).funds}}</p>
+  <h4 *ngIf="(projectToDisplay | async).funds >= (projectToDisplay | async).goal">Goal met!!!</h4>
   <h4>Project Managers:</h4>
   <h5 *ngFor="let manager of (projectToDisplay | async).projectManagers">{{manager}}</h5>
   <h4>Description: {{(projectToDisplay | async).description}}</h4>

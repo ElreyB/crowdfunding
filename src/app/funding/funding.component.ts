@@ -15,6 +15,7 @@ export class FundingComponent implements OnInit {
   projectId: string;
   @Input() fundProject: Project;
   amount: number;
+  buttonStatus = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,7 +28,7 @@ export class FundingComponent implements OnInit {
 
   beginFundProject(amountToFund) {
     this.amount = this.fundProject.funds += parseInt(amountToFund);
-    if(confirm(`Are you sure you want to fund ${amountToFund} to this project?`)){
+    if(confirm(`Are you sure you want to fund $${amountToFund} to this project?`)){
       this.projectService.fundProject(this.fundProject, this.amount);
     }
   }
