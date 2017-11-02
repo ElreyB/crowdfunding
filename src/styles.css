@@ -14,3 +14,7 @@
 body {
   background-image: url('/assets/images/helping-hands.png');
 }
+
+body.add {
+  background-image: url(/assets/images/asking_help.jpg);
+}

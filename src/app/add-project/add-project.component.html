@@ -1,18 +1,25 @@
-<form>
-  <label for="name">Name of Project:</label>
-  <input #newName class="form-control" required>
 
-  <label for="managers">Who are the project managers:</label>
-  <input #newManagers class="form-control" required>
+  <form class="well">
 
-  <label for="description">Describe project:</label>
-  <textarea #newDescription rows="8" cols="50" class="form-control"  required></textarea>
+    <label for="name">Name of Project:</label>
+    <input #newName class="form-control" required>
+    <hr>
 
-  <label for="goal">Project funding goal:</label>
-  <input type="number" #newGoal  class="form-control" required>
+    <label for="managers">Who are the project managers:</label>
+    <input #newManagers class="form-control" required>
+    <hr>
 
-  <label for="intention">What is your project intentions:</label>
-  <textarea #newIntention rows="8" cols="50"  class="form-control" required></textarea>
+    <label for="goal">Project funding goal:</label>
+    <input type="number" #newGoal  class="form-control" required>
+    <hr>
 
-  <button (click)="submitForm(newName.value, newManagers.value, newDescription.value, newGoal.value, newIntention.value);" >Add Project</button>
-</form>
+    <label for="description">Describe project:</label>
+    <textarea #newDescription rows="8" cols="50" class="form-control"  required></textarea>
+    <hr>
+
+    <label for="intention">What is your project intentions:</label>
+    <textarea #newIntention rows="8" cols="50"  class="form-control" required></textarea>
+    <hr>
+
+    <button (click)="submitForm(newName.value, newManagers.value, newDescription.value, newGoal.value, newIntention.value);" class="btn btn-block">Add Project</button>
+  </form>

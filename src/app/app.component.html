@@ -8,9 +8,14 @@
       <li><a routerLink="projects">Projects</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a>Log in</a></li>
-      <li><a>Sign up</a></li>
-    </ul>
+    <li *ngIf="isLoggedIn">
+      <a>{{userName}}</a>
+      <a (click)="logout()">Log out</a>
+    </li>
+    <li *ngIf ="!isLoggedIn"> 
+      <a (click)="login()">Log in</a>
+    </li>
+  </ul>
   </div>
 </nav>
 
