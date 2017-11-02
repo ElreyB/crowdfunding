@@ -21,4 +21,10 @@ export class EditProjectComponent implements OnInit {
     this.router.navigate(['projects']);
   }
 
+  beginDeletingProject(projectToDelete) {
+    if(confirm("Are you sure you want to delete this from the inventory?")){
+      this.projectService.deleteProject(projectToDelete);
+    }
+  }
+
 }
