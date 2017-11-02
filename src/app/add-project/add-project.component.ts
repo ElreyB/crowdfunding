@@ -19,12 +19,12 @@ export class AddProjectComponent {
 
   submitForm(
     name: string,
-    projectManagers: string[],
+    projectManagers: string,
     description: string,
     goal: number,
     intention: string
   ) {
-    let newProject: Project = new Project(name, projectManagers, description, goal, intention);
+    let newProject: Project = new Project(name, projectManagers.split(","), description, goal, intention);
     this.projectService.addProject(newProject);
     this.router.navigate(['projects']);
   }

@@ -1,7 +1,15 @@
 <h2>Projects:</h2>
 
-<div *ngFor="let project of projects | async" (click)="goToProjectPage(project)" class="panel panel-default">
+<div *ngFor="let project of projects | async" class="panel panel-default">
   <div class="panel-body">
-    <h4>{{project.name}}</h4>
+    <h4 (click)="goToProjectPage(project)">{{project.name}}</h4>
+
+    <div *ngIf="currentRoute === '/admin'">
+      <h4>Description: {{project.description}}</h4>
+      <h4>Funding Goal: ${{project.goal}}</h4>
+      <h4>Intention: {{project.intention}}</h4>
+      <hr>
+      <app-edit-project [selectedProject]="project"></app-edit-project>
+    </div>
   </div>
 </div>

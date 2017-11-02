@@ -1,0 +1,18 @@
+<form>
+  <label for="editName">Edit Name:</label>
+  <input [(ngModel)]="selectedProject.name" name="name" class="form-control" required>
+
+  <label for="editManagers">Edit Project Managers:</label>
+  <input [(ngModel)]="selectedProject.projectManagers" name="managers" class="form-control" required>
+
+  <label for="description">Describe project:</label>
+  <textarea [(ngModel)]="selectedProject.description" name="description" rows="8" cols="50" class="form-control" required></textarea>
+
+  <label for="goal">Project funding goal:</label>
+  <input type="number" [(ngModel)]="selectedProject.goal" name="goal" class="form-control" required>
+
+  <label for="intention">What is your project intentions:</label>
+  <textarea [(ngModel)]="selectedProject.intention" name="intention" rows="8" cols="50"  class="form-control" required></textarea>
+
+  <button (click)="beginUpdatingProject(selectedProject)">Update Project</button>
+</form>
