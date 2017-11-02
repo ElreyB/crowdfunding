@@ -1,22 +1,22 @@
-<h2>Projects:</h2>
+<div class="page-header">
+  <h1>Projects</h1>
+  <select (change)="onChange($event.target.value)" class="form-control form-control-lg">
+    <option value="allProjects">All Projects</option>
+    <option value="halfway">Halfway to Goal</option>
+    <option value="aroundHalf">More or last to Goal</option>
+    <option value="oneFourth">Quarter of the way to Goal</option>
+  </select>
+</div>
 
-<select (change)="onChange($event.target.value)">
-  <option value="allProjects">All Projects</option>
-  <option value="halfway">Halfway to Goal</option>
-  <option value="aroundHalf">More or last to Goal</option>
-  <option value="oneFourth">Quarter of the way to Goal</option>
-</select>
+<br>
+<div *ngFor="let project of projects | async | funds:filterByFunds; let i=index" class="well">
+  <h2 (click)="goToProjectPage(project)">{{project.name}}</h2>
 
-<div *ngFor="let project of projects | async | funds:filterByFunds" class="panel panel-default">
-  <div class="panel-body">
-    <h4 (click)="goToProjectPage(project)">{{project.name}}</h4>
-
-    <div *ngIf="currentRoute === '/admin'">
-      <h4>Description: {{project.description}}</h4>
-      <h4>Funding Goal: ${{project.goal}}</h4>
-      <h4>Intention: {{project.intention}}</h4>
-      <hr>
-      <app-edit-project [selectedProject]="project"></app-edit-project>
-    </div>
+  <div *ngIf="currentRoute === '/admin'">
+    <h4>Description: {{project.description}}</h4>
+    <h4>Funding Goal: ${{project.goal}}</h4>
+    <h4>Intention: {{project.intention}}</h4>
+    <hr>
+    <app-edit-project [selectedProject]="project"></app-edit-project>
   </div>
 </div>
