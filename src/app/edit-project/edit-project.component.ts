@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class EditProjectComponent implements OnInit {
   @Input() selectedProject;
+  
   constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {

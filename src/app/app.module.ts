@@ -12,6 +12,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { AddProjectComponent } from './add-project/add-project.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { FundingComponent } from './funding/funding.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     ProjectDetailComponent,
     AddProjectComponent,
     AdminComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    FundingComponent
   ],
   imports: [
     BrowserModule,

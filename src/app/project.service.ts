@@ -30,10 +30,15 @@ export class ProjectService {
                                   goal: localUpdatedProject.goal,
                                   intention: localUpdatedProject.intention});
   }
-  
+
   deleteProject(localProjectToDelete) {
     let projectEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
     projectEntryInFirebase.remove();
+  }
+
+  fundProject(localProjectToFund, amount) {
+    let projectEntryInFirebase = this.getProjectById(localProjectToFund.$key);
+    projectEntryInFirebase.update({funds: amount });
   }
 
 }

@@ -1,4 +1,5 @@
 export class Project {
+  public funds = 0;
   constructor(
     public name: string,
     public projectManagers: string[],

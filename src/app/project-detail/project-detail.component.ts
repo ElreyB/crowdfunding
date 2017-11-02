@@ -14,6 +14,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class ProjectDetailComponent implements OnInit {
   projectId: string;
   projectToDisplay;
+  amount: number;
 
   constructor(
     private route: ActivatedRoute,

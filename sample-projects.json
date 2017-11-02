@@ -3,20 +3,23 @@
   "projectManagers": ["Elrey", "Megan"],
   "description": "We want to save kittens",
   "goal": 5000000000,
-  "intention": "To save the Kittens"
+  "intention": "To save the Kittens",
+  "funds": 0
   },
   {
   "name": "Save Puppies",
   "projectManagers": ["Bob", "Jerome", "Oscar"],
   "description": "We want to save puppies",
   "goal": 90000,
-  "intention": "To save the Puppies"
+  "intention": "To save the Puppies",
+  "funds": 0
   },
   {
   "name": "Save Birds",
   "projectManagers": ["Cindy"],
   "description": "We want to save birds",
   "goal": 999468,
-  "intention": "To save the birds"
+  "intention": "To save the birds",
+  "funds": 0
     }]
 }
