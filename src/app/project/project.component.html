@@ -1,6 +1,13 @@
 <h2>Projects:</h2>
 
-<div *ngFor="let project of projects | async" class="panel panel-default">
+<select (change)="onChange($event.target.value)">
+  <option value="allProjects">All Projects</option>
+  <option value="halfway">Halfway to Goal</option>
+  <option value="aroundHalf">More or last to Goal</option>
+  <option value="oneFourth">Quarter of the way to Goal</option>
+</select>
+
+<div *ngFor="let project of projects | async | funds:filterByFunds" class="panel panel-default">
   <div class="panel-body">
     <h4 (click)="goToProjectPage(project)">{{project.name}}</h4>
 
