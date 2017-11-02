@@ -3,8 +3,11 @@
 <button (click)="beginFundProject(20)"type="button" name="button" class="btn btn-success">$20</button>
 <button (click)="beginFundProject(50)"type="button" name="button" class="btn btn-success">$50</button>
 <button (click)="beginFundProject(100)"type="button" name="button" class="btn btn-success">$100</button>
-<div class="">
-  <label for="Funds">Other amount</label>
-  <input type="number" name="funds" #newFunds placeholder="whole numbe amount e.i. $60, $1000" class="form-control">
-  <button type="button" name="button" class="btn btn-success" (click)="beginFundProject(newFunds.value); newFunds.value='';">Fund</button>
+<hr>
+<div class="form-inline">
+  <label for="Funds">Amount</label>
+  <div class="input-group">
+    <input type="number" name="funds" #newFunds placeholder="ex. $60, $1000" class="form-control">
+    <span class="input-group-addon" id="basic-addon1" (click)="beginFundProject(newFunds.value); newFunds.value='';" name="fund">Fund</span>
+  </div>
 </div>

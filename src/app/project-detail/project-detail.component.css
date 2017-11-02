@@ -1,0 +1,19 @@
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 16px;
+}
+
+.title {
+  text-align: center;
+}
+
+h3{
+  color: #5cb85c;
+}
+
+span#basic-addon1.input-group-addon {
+ background-color: #5cb85c;
+}

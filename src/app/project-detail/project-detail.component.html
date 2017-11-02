@@ -1,13 +1,28 @@
-<div class="details">
-  <h3>{{(projectToDisplay | async).name}}</h3>
-  <p>Funds: ${{(projectToDisplay | async).funds}}</p>
-  <h4 *ngIf="(projectToDisplay | async).funds >= (projectToDisplay | async).goal">Goal met!!!</h4>
-  <h4>Project Managers:</h4>
-  <h5 *ngFor="let manager of (projectToDisplay | async).projectManagers">{{manager}}</h5>
-  <h4>Description: {{(projectToDisplay | async).description}}</h4>
-  <h4>Funding Goal: ${{(projectToDisplay | async).goal}}</h4>
-  <h4>Intention: {{(projectToDisplay | async).intention}}</h4>
-  <hr>
-  <app-funding [fundProject]="(projectToDisplay | async)"></app-funding>
+<div class="page-header">
+  <div class="row">
+    <div class="col-md-3">
+      <h4>Project Owner(s)</h4>
+      <ul>
+        <li *ngFor="let manager of (projectToDisplay | async).projectManagers">{{manager}}</li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <h1 class="title">{{(projectToDisplay | async).name}}</h1>
+      <h4>{{(projectToDisplay | async).description}}</h4>
+    </div>
+  </div>
 
 </div>
+<div class="row">
+  <div class="col-md-8">
+    <h4>{{(projectToDisplay | async).intention}}</h4>
+    <img src="/assets/images/save_kitten.jpg" alt="kittens">
+  </div>
+  <div class="col-md-4">
+    <h4 *ngIf="(projectToDisplay | async).funds >= (projectToDisplay | async).goal">Goal met!!!</h4>
+    <h3>${{(projectToDisplay | async).funds}} <br><small>pledaged of  ${{(projectToDisplay | async).goal}} goal</small></h3>
+    <hr>
+    <app-funding [fundProject]="(projectToDisplay | async)"></app-funding>
+  </div>
+</div>
+  <hr>
